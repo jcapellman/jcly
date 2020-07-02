@@ -1,7 +1,21 @@
-﻿@page "/"
+﻿@page "/{key}"
 
-<h1>Hello, world!</h1>
+@inject NavigationManager navManager
 
-Welcome to your new app.
+@code {
+    int currentCount = 0;
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    protected override void OnInitialized()
+    {
+        var uri = navManager.ToAbsoluteUri(navManager.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("initialCount", out var _initialCount))
+        {
+            currentCount = Convert.ToInt32(_initialCount);
+        }
+    }
+
+    void IncrementCount()
+    {
+        currentCount++;
+    }
+}
