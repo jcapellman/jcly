@@ -33,8 +33,8 @@ namespace jcly.web.Pages
             }
 
             var key = await _dal.InsertURLAsync(URL);
-
-            return RedirectToPage(string.IsNullOrEmpty(key) ? "./Error" : $"./Generated?key={key}");
+            
+            return RedirectToPage(string.IsNullOrEmpty(key) ? "./Error" : "./Generated", new { Key = key});
         }
     }
 }
