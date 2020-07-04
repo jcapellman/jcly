@@ -17,13 +17,31 @@ namespace jcly.web.Pages
         [BindProperty]
         public string URL { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string K { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger, BaseDAL dal)
         {
             _logger = logger;
             _dal = dal;
         }
 
-        public void OnGet() => Page();
+        public async Task<IActionResult> OnGet()
+        {
+            if (string.IsNullOrEmpty(K))
+            {
+                return Page();
+            }
+
+            var url = await _dal.GetURLAsync(K);
+
+            if (string.IsNullOrEmpty(url))
+            {
+                return RedirectToPage("./Error");
+            }
+
+            return Redirect(url);
+        }
 
         public async Task<IActionResult> OnPostAsync()
         {
