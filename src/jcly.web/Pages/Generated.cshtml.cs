@@ -23,7 +23,7 @@ namespace jcly.web.Pages
                 return RedirectToPage("./Error");
             }
 
-            Key = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}/{Key}";
+            Key = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}?K={Key}";
 
             return Page();
         }
