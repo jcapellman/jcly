@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 
 using jcly.lib.DAL.Base;
+using jcly.lib.Helpers;
 
 namespace jcly.lib.DAL
 {
@@ -27,9 +28,19 @@ namespace jcly.lib.DAL
             {
                 var collection = db.GetCollection<URLObject>();
 
-                var urlObject = new URLObject()
+                url = url.ToLower();
+
+                var existingResult = collection.FindOne(a => a.URL == url);
+
+                if (existingResult != null)
                 {
-                    URL = url
+                    return existingResult.Key;
+                }
+                
+                var urlObject = new URLObject
+                {
+                    URL = url,
+                    Key = KeyGenerator.Generate()
                 };
 
                 collection.Insert(urlObject);
