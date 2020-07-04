@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30223.230
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcly", "jcly.csproj", "{2EE43D82-52B2-45F8-8916-3BE97A7C0913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcly.web", "jcly.web\jcly.web.csproj", "{B4D931B2-1029-4AD5-9843-5386DAFD261E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2EE43D82-52B2-45F8-8916-3BE97A7C0913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2EE43D82-52B2-45F8-8916-3BE97A7C0913}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2EE43D82-52B2-45F8-8916-3BE97A7C0913}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2EE43D82-52B2-45F8-8916-3BE97A7C0913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D931B2-1029-4AD5-9843-5386DAFD261E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D931B2-1029-4AD5-9843-5386DAFD261E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D931B2-1029-4AD5-9843-5386DAFD261E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D931B2-1029-4AD5-9843-5386DAFD261E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BDB457F7-D9ED-4EA2-863F-0794C2E1E01B}
+		SolutionGuid = {6DC1421B-FC6E-4EF7-9686-E8D150829796}
 	EndGlobalSection
 EndGlobal
