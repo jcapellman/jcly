@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 using jcly.lib.DAL.Base;
 using jcly.lib.Helpers;
@@ -17,9 +16,16 @@ namespace jcly.lib.DAL
             public string URL { get; set; }
         }
         
-        public override Task<string> GetURLAsync(string key)
+        public override async Task<string> GetURLAsync(string key)
         {
-            throw new NotImplementedException();
+            using (var db = new LiteDB.LiteDatabase(DB_FileName))
+            {
+                var collection = db.GetCollection<URLObject>();
+
+                var result = collection.FindOne(a => a.Key == key);
+
+                return result?.URL;
+            }
         }
 
         public override async Task<string> InsertURLAsync(string url)
