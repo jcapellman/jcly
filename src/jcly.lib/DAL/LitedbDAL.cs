@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 using jcly.lib.DAL.Base;
+using jcly.lib.DAL.Objects;
 using jcly.lib.Helpers;
 
 namespace jcly.lib.DAL
@@ -8,13 +9,6 @@ namespace jcly.lib.DAL
     public class LitedbDal : BaseDAL
     {
         private const string DB_FileName = "litedb.db";
-
-        public class URLObject
-        {
-            public string Key { get; set; }
-
-            public string URL { get; set; }
-        }
         
         public override async Task<string> GetURLAsync(string key)
         {
