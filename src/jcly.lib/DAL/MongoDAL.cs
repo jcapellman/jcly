@@ -37,6 +37,13 @@ namespace jcly.lib.DAL
         {
             var collection = _db.GetCollection<URLObject>(nameof(URLObject));
 
+            var result = await (await collection.FindAsync(a => a.URL == url)).FirstOrDefaultAsync();
+
+            if (result != null)
+            {
+                return result.Key;
+            }
+
             var urlObject = new URLObject
             {
                 URL = url,
