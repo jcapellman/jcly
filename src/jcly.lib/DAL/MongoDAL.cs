@@ -10,9 +10,12 @@ namespace jcly.lib.DAL
 {
     public class MongoDAL : BaseDAL
     {
+        private const string DEFAULT_HOSTNAME = "localhost";
+        private const int DEFAULT_PORTNUMBER = 27017;
+
         private readonly IMongoDatabase _db;
 
-        public MongoDAL(string hostName, int portNumber)
+        public MongoDAL(string hostName = DEFAULT_HOSTNAME, int portNumber = DEFAULT_PORTNUMBER)
         {
             var mongoSettings = new MongoClientSettings()
             {
