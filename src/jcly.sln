@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30223.230
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jcly.web", "jcly.web\jcly.web.csproj", "{B4D931B2-1029-4AD5-9843-5386DAFD261E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcly.lib", "jcly.lib\jcly.lib.csproj", "{6945BA16-0634-4B57-8F96-9A930092F268}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jcly.lib", "jcly.lib\jcly.lib.csproj", "{6945BA16-0634-4B57-8F96-9A930092F268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jcly.unittests", "jcly.unittests\jcly.unittests.csproj", "{B8538FD2-73A4-48F8-A26C-E5700E340EA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6945BA16-0634-4B57-8F96-9A930092F268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6945BA16-0634-4B57-8F96-9A930092F268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6945BA16-0634-4B57-8F96-9A930092F268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8538FD2-73A4-48F8-A26C-E5700E340EA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8538FD2-73A4-48F8-A26C-E5700E340EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8538FD2-73A4-48F8-A26C-E5700E340EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8538FD2-73A4-48F8-A26C-E5700E340EA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
